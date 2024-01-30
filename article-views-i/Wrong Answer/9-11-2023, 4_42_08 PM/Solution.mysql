@@ -1,0 +1,4 @@
+// https://leetcode.com/problems/article-views-i
+
+# Write your MySQL query statement below
+SELECT viewer_id as id from Views WHERE viewer_id = article_id ORDER BY id ASC;  

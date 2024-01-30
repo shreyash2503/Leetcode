@@ -1,0 +1,4 @@
+// https://leetcode.com/problems/list-the-products-ordered-in-a-period
+
+# Write your MySQL query statement below
+SELECT Products.product_name, SUM(Orders.unit) as unit FROM Products JOIN Orders ON Products.product_id = Orders.product_id WHERE EXTRACT(YEAR_MONTH FROM Orders.order_date) = 202002 GROUP BY Products.product_id HAVING SUM(Orders.unit) >= 100 ;

@@ -1,0 +1,4 @@
+// https://leetcode.com/problems/confirmation-rate
+
+# Write your MySQL query statement below
+SELECT s.user_id, ROUND(AVG(IF(c.action = 'confirmed', 1, 0)), 2) as confirmation_rate from Signups as s LEFT OUTER JOIN Confirmations as c ON c.user_id =  s.user_id GROUP BY user_id;
